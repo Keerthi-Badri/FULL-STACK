@@ -1,0 +1,17 @@
+/*element*/
+p{
+    color: yellow;
+}
+/*universal*/
+* {
+color:orange;
+}
+/*class selector -best practice*/
+.myclass{
+    background-color: green;
+}
+/*ID selector*/
+
+#myclass{
+    background-color: aquamarine;
+}
