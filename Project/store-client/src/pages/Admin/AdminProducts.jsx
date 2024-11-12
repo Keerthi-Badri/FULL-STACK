@@ -2,15 +2,18 @@ import React, { useEffect, useState } from 'react'
 import AdminPageHeader from '../../components/Admin/AdminPageHeader'
 import { Loader2, Pencil, Trash, TriangleAlert } from 'lucide-react'
 import { getProducts } from '../../api/api'
+
 const AdminProducts = () => {
   const [products, setProducts] = useState(null)
   const [loading, setLoading] = useState(true)
+
   async function fetchData() {
     try {
       const res = await getProducts()
       if (res.status === 200) {
         setProducts(res.data)
       }
+
     } catch (error) {
       console.log(error)
     }
@@ -18,9 +21,12 @@ const AdminProducts = () => {
       setLoading(false)
     }
   }
+
+
   useEffect(() => {
     fetchData()
   }, [])
+
   if (loading) {
     return (
       <>
@@ -54,6 +60,7 @@ const AdminProducts = () => {
           </tr>
         </thead>
         <tbody>
+
           {
             products.map((product, index) => (
               <tr key={index}>
@@ -72,6 +79,7 @@ const AdminProducts = () => {
               </tr>
             ))
           }
+
           {/* <ProductCard img={product.img} name={product.name} price={product.price} key={product._id} /> */}
           <tr>
             <td className='p-4'>Product1 </td>
@@ -92,4 +100,5 @@ const AdminProducts = () => {
     </div>
   )
 }
+
 export default AdminProducts

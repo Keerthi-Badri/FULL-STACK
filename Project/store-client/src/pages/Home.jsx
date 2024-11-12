@@ -1,6 +1,7 @@
 import HomeCards from "../components/HomeCards"
 import HomeCarousel from "../components/HomeCarousel"
 import SocialCard from "../components/SocialCard"
+
 const Home = () => {
     return (
         <>
@@ -12,4 +13,5 @@ const Home = () => {
         </>
     )
 }
+
 export default Home

@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom"
 import AdminLeftBar from "../components/Admin/AdminLeftBar"
 import AdminTopBar from "../components/Admin/AdminTopBar"
+
 const AdminLayout = () => {
     return (
         <>
@@ -13,6 +14,7 @@ const AdminLayout = () => {
                         <AdminTopBar />
                     </div>
                     <div className="w-full h-full min-h-[92vh] flex justify-start items-start p-3">
+
                         <Outlet />
                     </div>
                 </div>
@@ -20,4 +22,5 @@ const AdminLayout = () => {
         </>
     )
 }
+
 export default AdminLayout

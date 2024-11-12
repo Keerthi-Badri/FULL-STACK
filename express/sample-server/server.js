@@ -1,13 +1,16 @@
-const express=require('express')
-const port=3000
-const app=express()
+const express = require('express')
+const Port = 3000  
+
+const app = express() 
 
 app.use(express.json())
-app.get('/',(req,res)=>{
+
+app.get('/',(req, res) => {
     res.status(200).json("Hello");
 })
-app.listen(port,()=>{
-    console.log("server is running in port:" +port)
-    console.log(`server is running in port:${port}`)
 
+
+app.listen(Port,()=>{      
+    // console.log("Server is running in Port : " + Port)   
+    console.log(`Server is running in Port : ${Port}`)
 })
